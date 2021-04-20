@@ -4,11 +4,13 @@ export const counterState = {
     count: 0
 }
 
-export const counterMutation = (state: storeTypes) => {
-    state.count++
+export const counterMutation = {
+    addUser(state: storeTypes) {
+        state.count++
+    }
 }
 
-export const counter = {
-    state: counterState,
+export const counterStore = {
+    state: () => counterState,
     mutations: counterMutation,
 }

@@ -4,13 +4,14 @@ import { storeTypes } from './index';
 export const userState = {
     user: ['nill', 'summer']
 }
+
 export const userMutation = {
     add(state: storeTypes) {
         state.user
     }
 }
 
-export const user = {
-    state: userState,
+export const userStore = {
+    state: () => userState,
     mutations: userMutation
 }

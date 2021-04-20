@@ -1,21 +1,12 @@
 import { createStore } from "vuex";
-import { counterState, counter } from "./counter";
-import { userState, user } from './user';
+import { counterState, counterStore } from "./counter";
+import { userState, userStore } from './user';
 
 export type storeTypes = typeof counterState & typeof userState
 
 export default createStore({
-    state() {
-        return {
-            ...counterState,
-            ...user.state
-        }
+    modules: {
+        counterStore,
+        userStore,
     },
-    mutations: {
-        ...counter.mutations,
-        ...user.mutations
-    },
-    actions: {
-
-    }
 })
