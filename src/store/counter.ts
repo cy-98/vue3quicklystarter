@@ -1,16 +1,16 @@
-import { storeTypes } from './index';
+import storeTypes from './type';
 
 export const counterState = {
-    count: 0
-}
+  count: 0,
+};
 
-export const counterMutation = {
-    addUser(state: storeTypes) {
-        state.count++
-    }
-}
+const counterMutation = {
+  increment(state: storeTypes) {
+    state.count += 1;
+  },
+};
 
-export const counterStore = {
-    state: () => counterState,
-    mutations: counterMutation,
-}
+export const counter = {
+  state: () => counterState,
+  mutations: counterMutation,
+};

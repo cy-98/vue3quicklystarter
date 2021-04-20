@@ -1,0 +1,12 @@
+# Editor configuration http://editorconfig.org
+# top layer config file
+# 在vscode需要安装插件 editorconfig for vscode
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = lf
