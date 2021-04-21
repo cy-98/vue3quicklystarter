@@ -4,11 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*, {vue,js,ts}": "eslint --fix"
+    "serve": "vite preview"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^1.2.1",
